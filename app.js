@@ -9,7 +9,6 @@ document.querySelector("form").addEventListener("submit", jokes);
         } else {
             names = ["Chuck", "Norris"];
         }
-        console.log(names);
     const res = await fetch(`https://api.icndb.com/jokes/random/${number}?firstName=${names[0]}&lastName=${names[1]}`);
     const resData = await res.json();
     let output = "";
