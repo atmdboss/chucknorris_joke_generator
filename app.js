@@ -2,7 +2,7 @@ document.querySelector("form").addEventListener("submit", jokes);
  async function jokes(e){
     e.preventDefault();
     let number = document.getElementById("number").value;
-    const res = await fetch(`http://api.icndb.com/jokes/random/${number}`);
+    const res = await fetch(`https://api.icndb.com/jokes/random/${number}`);
     const resData = await res.json();
     let output = "";
     resData.value.forEach(item =>  output += `<li>${item.joke}</li>`);
