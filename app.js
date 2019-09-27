@@ -3,7 +3,7 @@ document.querySelector("form").addEventListener("submit", jokes);
     e.preventDefault();
     const number = document.getElementById("number").value,
         name = document.getElementById("name").value;
-    const names = name.split(" ");
+    const names = Array.from(name.split(" "));
     const res = await fetch(`https://api.icndb.com/jokes/random/${number}?firstName=${name[0]}&lastName=${name[1]}`);
     const resData = await res.json();
     let output = "";
